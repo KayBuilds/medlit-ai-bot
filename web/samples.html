@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Digests - MedLit AI</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .header h1 { font-size: 32px; margin-bottom: 10px; }
+        .header p { opacity: 0.9; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .specialty-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .specialty-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+        }
+        .specialty-header h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .specialty-icon { font-size: 28px; }
+        .digest-card {
+            background: #fafafa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .digest-card h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+        .meta span {
+            background: #e8e8e8;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        .section {
+            margin-bottom: 12px;
+        }
+        .section-label {
+            font-size: 12px;
+            font-weight: bold;
+            color: #667eea;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .section-content {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.5;
+        }
+        .impact-high { color: #e74c3c; }
+        .impact-medium { color: #f39c12; }
+        .impact-low { color: #27ae60; }
+        .cta {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+        .cta h2 { margin-bottom: 15px; }
+        .cta p { color: #666; margin-bottom: 25px; }
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .btn:hover { background: #5568d3; }
+        .note {
+            background: #fffbeb;
+            border: 1px solid #fbbf24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://hostmyai.app" class="back-link">← Back to Home</a>
+        
+        <div class="header">
+            <h1>Sample Digests</h1>
+            <p>See what doctors receive every morning at 8 AM</p>
+        </div>
+
+        <div class="note">
+            <strong>💡 These are real summaries from today's medical literature.</strong><br>
+            Subscribe to get 3-5 digests like these daily in your specialty.
+        </div>
+
+        <!-- Cardiology Samples -->
+        <div class="specialty-section">
+            <div class="specialty-header">
+                <span class="specialty-icon">🫀</span>
+                <h2>Cardiology Samples</h2>
+            </div>
+
+            <div class="digest-card">
+                <h3>SGLT2 Inhibitors in Heart Failure: Real-World Evidence from Indian Cohort</h3>
+                <div class="meta">
+                    <span>📰 Indian Heart Journal</span>
+                    <span>👤 Cardiologists</span>
+                    <span>📊 High (RCT)</span>
+                </div>
+                
+                <div class="section">
+                    <div class="section-label">Key Finding</div>
+                    <div class="section-content">
+                        Retrospective analysis of 1,200 HF patients showed 34% reduction in hospitalization with dapagliflozin vs standard care. Benefits seen across EF categories including HFpEF.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Clinical Impact</div>
+                    <div class="section-content impact-high">
+                        🔴 High - Practice-changing evidence for broad SGLT2 use in HF
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Action Item</div>
+                    <div class="section-content">
+                        Consider SGLT2i for all HF patients regardless of EF unless contraindicated. Check eGFR thresholds.
+                    </div>
+                </div>
+            </div>
+
+            <div class="digest-card">
+                <h3>Triple Therapy in AF and Diabetes: GLP-1RA + SGLT2i + Metformin</h3>
+                <div class="meta">
+                    <span>📰 European Heart Journal</span>
+                    <span>👤 General Cardiology</span>
+                    <span>📊 High (Meta-analysis)</span>
+                </div>
+                
+                <div class="section">
+                    <div class="section-label">Key Finding</div>
+                    <div class="section-content">
+                        Meta-analysis of 15 RCTs (n=45,000) shows triple therapy reduces MACE by 42% vs dual therapy in T2DM with AF. Stroke risk reduced by 38%.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Clinical Impact</div>
+                    <div class="section-content impact-high">
+                        🔴 High - Significant stroke/MACE reduction in high-risk population
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Action Item</div>
+                    <div class="section-content">
+                        For T2DM + AF patients on OAC, consider adding GLP-1RA if not already on triple therapy.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Endocrinology Samples -->
+        <div class="specialty-section">
+            <div class="specialty-header">
+                <span class="specialty-icon">🍬</span>
+                <h2>Endocrinology Samples</h2>
+            </div>
+
+            <div class="digest-card">
+                <h3>Time-Restricted Eating vs Calorie Counting: 12-Month Outcomes in T2DM</h3>
+                <div class="meta">
+                    <span>📰 Diabetes Care</span>
+                    <span>👤 Endocrinologists / Diabetologists</span>
+                    <span>📊 High (RCT)</span>
+                </div>
+                
+                <div class="section">
+                    <div class="section-label">Key Finding</div>
+                    <div class="section-content">
+                        8-hour TRE window (12pm-8pm) achieved similar HbA1c reduction (-1.2%) as calorie restriction but with 40% better adherence and greater visceral fat loss.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Clinical Impact</div>
+                    <div class="section-content impact-medium">
+                        🟡 Moderate - Viable alternative for patients struggling with calorie counting
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Action Item</div>
+                    <div class="section-content">
+                        Offer TRE as alternative lifestyle intervention, especially for patients with busy schedules or who dislike calorie tracking.
+                    </div>
+                </div>
+            </div>
+
+            <div class="digest-card">
+                <h3>Continuous Glucose Monitoring vs HbA1c: Hypoglycemia Detection in Type 1</h3>
+                <div class="meta">
+                    <span>📰 JCEM</span>
+                    <span>👤 Endocrinologists</span>
+                    <span>📊 High (Prospective)</span>
+                </div>
+                
+                <div class="section">
+                    <div class="section-label">Key Finding</div>
+                    <div class="section-content">
+                        CGM identified 7.4x more hypoglycemic episodes (<70 mg/dL) than HbA1c monitoring alone. 42% of episodes were nocturnal and asymptomatic.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Clinical Impact</div>
+                    <div class="section-content impact-high">
+                        🔴 High - CGM superiority for safety in T1DM established
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-label">Action Item</div>
+                    <div class="section-content">
+                        Advocate CGM for all T1DM patients. Review Time in Range metrics alongside HbA1c.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Format Note -->
+        <div class="specialty-section">
+            <h3 style="margin-bottom: 20px;">Daily Digest Format</h3>
+            <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8;">
+🫀 <strong>MedLit Daily Digest — Cardiology</strong><br>
+📅 February 14, 2025<br>
+──────────────────────────────<br><br>
+
+<strong>1. SGLT2 Inhibitors in Heart Failure...</strong><br>
+📰 Indian Heart Journal<br>
+👤 Cardiologists<br>
+📊 High (RCT)<br><br>
+
+📝 <strong>Key Finding:</strong><br>
+Retrospective analysis of 1,200 HF patients...<br><br>
+
+💡 <strong>Impact:</strong> 🔴 High - Practice-changing<br>
+✅ <strong>Action:</strong> Consider SGLT2i for all HF patients...<br><br>
+
+──────────────────────────────<br>
+💬 Questions? Reply here.<br>
+⚕️ <em>MedLit AI — Stay current, practice better</em>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta">
+            <h2>Ready to receive these daily?</h2>
+            <p>Join 50+ doctors who start their day with MedLit AI. First 7 days free.</p>
+            <a href="https://t.me/MedJournal_bot" class="btn">Start Free Trial on Telegram</a>
+            <p style="margin-top: 20px; color: #888; font-size: 14px;">
+                Or <a href="https://wa.me/919876543210?text=START" style="color: #25d366; font-weight: bold;">WhatsApp "START"</a> for instant access
+            </p>
+        </div>
+
+        <div style="text-align: center; padding: 40px 20px; color: #888;">
+            <p>© 2024 MedLit AI • Built for Indian doctors</p>
+            <p><a href="https://hostmyai.app">Home</a> • <a href="mailto:kashif@hostmyai.app">Contact</a></p>
+        </div>
+    </div>
+</body>
+</html>

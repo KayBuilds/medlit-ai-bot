@@ -1,0 +1,10 @@
+{
+  "openai_api_key": "",
+  "telegram_bot_token": "8453120303:AAElOAgxz8dtBRM6b95OgFsa-LVEnYCo_tA",
+  "whatsapp_api_key": "",
+  "admin_phone": "",
+  "admin_email": "your@email.com",
+  "specialties": ["cardiology", "endocrinology"],
+  "delivery_time": "08:00",
+  "timezone": "Asia/Kolkata"
+}
