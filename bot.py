@@ -1,25 +1,33 @@
-﻿import os
+﻿import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Application, CommandHandler, CallbackQueryHandler
-from datetime import datetime, timedelta
+from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
+import os
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 TOKEN = os.environ.get("BOT_TOKEN", "8233772963:AAHHu9X00Y22A75eVjXOs7m0Aw23g3aCin8")
 
-SAMPLE = """Welcome to MedLit AI!
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    keyboard = [
+        [InlineKeyboardButton("View Sample", callback_data="sample")],
+        [InlineKeyboardButton("Start Trial", callback_data="trial")]
+    ]
+    await update.message.reply_text("Welcome! Click below:", reply_markup=InlineKeyboardMarkup(keyboard))
 
-Daily medical research summaries."""
-
-async def start(update, context):
-    keyboard = [[InlineKeyboardButton("START TRIAL", callback_data="trial")]]
-    await update.message.reply_text("MedLit AI - Click to start trial", reply_markup=InlineKeyboardMarkup(keyboard))
-
-async def button(update, context):
+async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    if query.data == "trial":
-        await context.bot.send_message(chat_id=query.from_user.id, text="TRIAL ACTIVATED!")
+    if query.data == "sample":
+        await query.edit_message_text("Here is a sample digest...")
+    elif query.data == "trial":
+        await query.edit_message_text("Trial activated!")
 
-app = Application.builder().token(TOKEN).build()
-app.add_handler(CommandHandler("start", start))
-app.add_handler(CallbackQueryHandler(button))
-app.run_polling()
+def main():
+    application = Application.builder().token(TOKEN).build()
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CallbackQueryHandler(button))
+    application.run_polling()
+
+if __name__ == "__main__":
+    main()
